@@ -18,6 +18,7 @@
 		BECE6E5D2857039700D5A0A6 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BECE6E562857039600D5A0A6 /* Rubik-Bold.ttf */; };
 		BECE6E602857039700D5A0A6 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BECE6E592857039600D5A0A6 /* Rubik-Regular.ttf */; };
 		BECE6E652857071600D5A0A6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE6E642857071600D5A0A6 /* Extension.swift */; };
+		BECE6E6A285720F600D5A0A6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE6E69285720F600D5A0A6 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BECE6E562857039600D5A0A6 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Bold.ttf"; path = "../../../../../Downloads/Rubik-2/static/Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		BECE6E592857039600D5A0A6 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Regular.ttf"; path = "../../../../../Downloads/Rubik-2/static/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		BECE6E642857071600D5A0A6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BECE6E69285720F600D5A0A6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,18 @@
 		BECE6E63285706FC00D5A0A6 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				BECE6E66285714DC00D5A0A6 /* Subviews */,
 				BECE6E642857071600D5A0A6 /* Extension.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		BECE6E66285714DC00D5A0A6 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				BECE6E69285720F600D5A0A6 /* CustomButton.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				BECE6E3C2856FF0B00D5A0A6 /* SignUpViewController.swift in Sources */,
 				BECE6E382856FF0B00D5A0A6 /* AppDelegate.swift in Sources */,
 				BECE6E652857071600D5A0A6 /* Extension.swift in Sources */,
+				BECE6E6A285720F600D5A0A6 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
