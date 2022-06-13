@@ -14,19 +14,22 @@ struct CustomButtonViewModel {
 class CustomButton: UIButton {
     private let title: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 1
         label.textAlignment = .center
         label.textColor = .white
         label.font = UIFont.rubik(.medium, size: 16)
         
         return label
     }()
+    
+    convenience init() {
+            self.init(type: .system)
+        }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(title)
-        clipsToBounds = true
-        layer.cornerRadius = 16
+        clipsToBounds = false
+        layer.cornerRadius = 13
         backgroundColor = .orange
     }
     
@@ -40,8 +43,15 @@ class CustomButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        title.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/2)
+        title.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
     }
     
 
 }
+
+/*let customButton = CustomButton(frame: CGRect(x: 0, y: 0, width: 311, height: 56))
+view.addSubview(customButton)
+customButton.center = view.center
+customButton.configure(with: CustomButtonViewModel(
+    titleText:"Add to Dictionary"
+))*/

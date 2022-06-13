@@ -19,4 +19,5 @@ extension UIFont{
     static func rubik(_ type: FontType, size: CGFloat) -> UIFont{
         return UIFont(name: "Rubik\(type.rawValue)", size: size)!
     }
+
 }
