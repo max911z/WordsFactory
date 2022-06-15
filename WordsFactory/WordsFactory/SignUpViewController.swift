@@ -53,4 +53,40 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+    
+    fileprivate func chechEmail() {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        if (EmailTextField.text == "") {
+            MessageEmail.isHidden = false
+            MessageEmail.text = "Заполните поле!"
+        }
+        else if (NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: EmailTextField.text) == false) {
+            MessageEmail.isHidden = false
+            MessageEmail.text = "Введите корректный E-mail!"
+        }
+    }
+    
+    fileprivate func checkPassword() {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[d$@$!%.*?&#])[A-Za-z\\dd$@$!%.*?&#]{8,}"
+        if (PasswordTextField.text == "") {
+            MessagePassword.isHidden = false
+            MessagePassword.text = "Заполните поле!"
+        }
+        else if (NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: PasswordTextField.text) == false) {
+            MessagePassword.isHidden = false
+            MessagePassword.text = "Формат пароля:[a-z A-Z 0-9 $@$!%.*?&#]"
+        }
+    }
+    
+    
+    fileprivate func checkRepeatPassword() {
+        if (PasswordRepeatTextField.text == "") {
+            MessageRepeatPassword.isHidden = false
+            MessageRepeatPassword.text = "Повторите пароль!"
+        }
+        else if (PasswordTextField.text != PasswordRepeatTextField.text) {
+            MessageRepeatPassword.isHidden = false
+            MessageRepeatPassword.text = "Пароли не совпадают!"
+        }
+    }
 }
