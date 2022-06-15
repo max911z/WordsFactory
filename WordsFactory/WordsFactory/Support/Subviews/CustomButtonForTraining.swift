@@ -50,6 +50,30 @@ class ProfileViewController: UIViewController, TagListViewDelegate {
         tagListView.cornerRadius = 12
         
         tagListView.addTags(["Koltin","Android","iOS","Backend","ML","SwiftUI","Jetpack Compose","Java","Ktor","Spring",".Net","JavaScript","SQL","Koltin","Android","iOS","Backend","ML","SwiftUI","Jetpack Compose","Java","Ktor","Spring",".Net","JavaScript","SQL"])
+        
+        AF.request("http://193.38.50.175/itindr/api/mobile/v1/profile",
+                   method: .get,
+                   encoding: JSONEncoding.default,
+                   headers: ["Authorization":"Bearer \(accessToken)"]).responseData{ [self]response in
+            switch response.result{
+            case .success (let data):
+                print("Мой профиль", response.response!.statusCode)
+                output = try? JSONDecoder().decode(profile.self, from: data)
+                
+                if response.response!.statusCode == 200{
+                    userNameLabel.text = output?.name
+                    aboutMeTextView.text = output?.aboutMyself
+                }
+                
+            case .failure (let error):
+                print(error)
+                let alert = UIAlertController(title: "Внимание", message: "Проверьте соединение с сервером", preferredStyle: .alert)
+                let okeyButton = UIAlertAction(title: "Ok", style: .cancel )
+                alert.addAction(okeyButton)
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func goToEditViewConroller(_ sender: Any) {
