@@ -243,4 +243,35 @@ class SecondMusicViewController: UIViewController {
     @objc private func goBack(sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    @objc func goToSleepMusic(_ gesture: UITapGestureRecognizer){
+        guard let navigationController = self.navigationController else { return }
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        var navigationArray = navigationController.viewControllers
+        let temp = navigationArray.last
+        navigationArray.removeAll()
+        navigationArray.append(temp!)
+        self.navigationController?.viewControllers = navigationArray
+        let popUpVC = SleepMusicViewController()
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParent: self) // 5
+    }
+    
+    @objc func goToPlayOption(_ gesture: UITapGestureRecognizer){
+        guard let navigationController = self.navigationController else { return }
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        var navigationArray = navigationController.viewControllers
+        let temp = navigationArray.last
+        navigationArray.removeAll()
+        navigationArray.append(temp!)
+        self.navigationController?.viewControllers = navigationArray
+        let popUpVC = PlayOptionViewController()
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParent: self) // 5
+        
 }
