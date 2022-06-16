@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE53BE8E285998EC007B43E4 /* CustomButtonForTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53BE8D285998EC007B43E4 /* CustomButtonForTraining.swift */; };
+		BE53BE95285AE4F7007B43E4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53BE94285AE4F7007B43E4 /* OnboardingViewController.swift */; };
 		BECE6E382856FF0B00D5A0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE6E372856FF0B00D5A0A6 /* AppDelegate.swift */; };
 		BECE6E3C2856FF0B00D5A0A6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE6E3B2856FF0B00D5A0A6 /* SignUpViewController.swift */; };
 		BECE6E422856FF0B00D5A0A6 /* WordsFactory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BECE6E402856FF0B00D5A0A6 /* WordsFactory.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		BE53BE8D285998EC007B43E4 /* CustomButtonForTraining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonForTraining.swift; sourceTree = "<group>"; };
+		BE53BE94285AE4F7007B43E4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BECE6E342856FF0B00D5A0A6 /* WordsFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECE6E372856FF0B00D5A0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECE6E3B2856FF0B00D5A0A6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				BECE6E452856FF0D00D5A0A6 /* LaunchScreen.storyboard */,
 				BECE6E482856FF0D00D5A0A6 /* Info.plist */,
 				BECE6E402856FF0B00D5A0A6 /* WordsFactory.xcdatamodeld */,
+				BE53BE94285AE4F7007B43E4 /* OnboardingViewController.swift */,
 			);
 			path = WordsFactory;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				BECE6E3C2856FF0B00D5A0A6 /* SignUpViewController.swift in Sources */,
 				BECE6E382856FF0B00D5A0A6 /* AppDelegate.swift in Sources */,
 				BECE6E652857071600D5A0A6 /* Extension.swift in Sources */,
+				BE53BE95285AE4F7007B43E4 /* OnboardingViewController.swift in Sources */,
 				BE53BE8E285998EC007B43E4 /* CustomButtonForTraining.swift in Sources */,
 				BECE6E6A285720F600D5A0A6 /* CustomButton.swift in Sources */,
 			);
